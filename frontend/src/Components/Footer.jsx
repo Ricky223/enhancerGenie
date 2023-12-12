@@ -22,7 +22,7 @@ const Footer = ({ ...children }) => {
       <Text p={2} align="center" color="gray.600" w="100%" h={"40px"}>
         © {new Date().getFullYear()} Copyright: Connect with us on{" "}
         <a
-          href="https://github.com/yudeep-rajbhandari/enhancerGenePro"
+          href="https://github.com/Ricky223/enhancerGenie"
           target="_blank"
           rel="noreferrer"
         >
