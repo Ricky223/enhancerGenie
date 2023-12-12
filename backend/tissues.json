@@ -1,0 +1,1266 @@
+[
+  {
+    "assembly": "GRCh38",
+    "tissues": [
+      {
+        "value": "adrenal-gland",
+        "label": "Adrenal Gland",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "amygdala",
+        "label": "Amygdala",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "aorta",
+        "label": "Aorta",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "basal-ganglia-caudate",
+        "label": "Basal Ganglia Caudate",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "basal-ganglia-nucleus-accumbens",
+        "label": "Basal Ganglia Nucleus Accumbens",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "basal-ganglia-putamen",
+        "label": "Basal Ganglia Putamen",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "bladder",
+        "label": "Bladder",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          }
+        ]
+      },
+      {
+        "value": "brain-cortex",
+        "label": "Brain Cortex",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "breast-mammary",
+        "label": "Breast Mammary",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "cerebellum",
+        "label": "Cerebellum",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "coronary-artery",
+        "label": "Coronary Artery",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "dorsolateral-prefrontal-cortex",
+        "label": "Dorsolateral Prefrontal Cortex",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          }
+        ]
+      },
+      {
+        "value": "esophagus-GE-junction",
+        "label": "Esophagus GE Junction",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "leftVentricle",
+        "label": "Heart Left Ventricle",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "hippocampus",
+        "label": "Hippocampus",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "hypothalamus",
+        "label": "Hypothalamus",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "liver",
+        "label": "Liver",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "lung",
+        "label": "Lung",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "omentum-visceral-adipose",
+        "label": "Omentum Visceral Adipose",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "ovary",
+        "label": "Ovary",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "pancreas",
+        "label": "Pancreas",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "pituitary",
+        "label": "Pituitary",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "prostate",
+        "label": "Prostate",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "psoas-muscle",
+        "label": "Psoas Muscle",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          }
+        ]
+      },
+      {
+        "value": "renal-cortex",
+        "label": "Renal Cortex",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "right-ventricle",
+        "label": "Right Ventricle",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          }
+        ]
+      },
+      {
+        "value": "sigmoid-colon",
+        "label": "Sigmoid Colon",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "skeletal-muscle",
+        "label": "Skeletal Muscle",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "small-intestines",
+        "label": "Small Intestines",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "spinal-cord-cervical-c1",
+        "label": "Spinal Cord Cervical C1",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "spleen",
+        "label": "Spleen",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "stomach",
+        "label": "Stomach",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "subcutaneous-adipose",
+        "label": "Subcutaneous Adipose",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "testis",
+        "label": "Testis",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "thymus",
+        "label": "Thymus",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          }
+        ]
+      },
+      {
+        "value": "tibial-artery",
+        "label": "Tibial Artery",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "transverse-colon",
+        "label": "Transverse Colon",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "uterus",
+        "label": "Uterus",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "vagina",
+        "label": "Vagina",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "whole-blood",
+        "label": "Whole Blood",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "assembly": "GRCh37",
+    "tissues": [
+      {
+        "value": "adrenal-gland",
+        "label": "Adrenal Gland",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "amygdala",
+        "label": "Amygdala",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "aorta",
+        "label": "Aorta",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "basal-ganglia-caudate",
+        "label": "Basal Ganglia Caudate",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "basal-ganglia-nucleus-accumbens",
+        "label": "Basal Ganglia Nucleus Accumbens",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "basal-ganglia-putamen",
+        "label": "Basal Ganglia Putamen",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "bladder",
+        "label": "Bladder",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          }
+        ]
+      },
+      {
+        "value": "brain-cortex",
+        "label": "Brain Cortex",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "breast-mammary",
+        "label": "Breast Mammary",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "cerebellum",
+        "label": "Cerebellum",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "coronary-artery",
+        "label": "Coronary Artery",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "dorsolateral-prefrontal-cortex",
+        "label": "Dorsolateral Prefrontal Cortex",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          }
+        ]
+      },
+      {
+        "value": "esophagus-GE-junction",
+        "label": "Esophagus GE Junction",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "leftVentricle",
+        "label": "Heart Left Ventricle",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "hippocampus",
+        "label": "Hippocampus",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "hypothalamus",
+        "label": "Hypothalamus",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "liver",
+        "label": "Liver",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "lung",
+        "label": "Lung",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "omentum-visceral-adipose",
+        "label": "Omentum Visceral Adipose",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "ovary",
+        "label": "Ovary",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "pancreas",
+        "label": "Pancreas",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "pituitary",
+        "label": "Pituitary",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "prostate",
+        "label": "Prostate",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "psoas-muscle",
+        "label": "Psoas Muscle",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "right-ventricle",
+        "label": "Right Ventricle",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          }
+        ]
+      },
+      {
+        "value": "sigmoid-colon",
+        "label": "Sigmoid Colon",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "skeletal-muscle",
+        "label": "Skeletal Muscle",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "small-intestines",
+        "label": "Small Intestines",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "spinal-cord-cervical-c1",
+        "label": "Spinal Cord Cervical C1",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "spleen",
+        "label": "Spleen",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "stomach",
+        "label": "Stomach",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "subcutaneous-adipose",
+        "label": "Subcutaneous Adipose",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "testis",
+        "label": "Testis",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "thymus",
+        "label": "Thymus",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "chiaPet",
+            "label": "Chromatin Loop"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "tibial-artery",
+        "label": "Tibial Artery",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "transverse-colon",
+        "label": "Transverse Colon",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "uterus",
+        "label": "Uterus",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          },
+          {
+            "value": "abc",
+            "label": "Activity by Contact"
+          }
+        ]
+      },
+      {
+        "value": "vagina",
+        "label": "Vagina",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      },
+      {
+        "value": "whole-blood",
+        "label": "Whole Blood",
+        "supportedAlgorithms": [
+          {
+            "value": "distance",
+            "label": "Distance"
+          },
+          {
+            "value": "eqtl",
+            "label": "eQTL"
+          }
+        ]
+      }
+    ]
+  }
+]

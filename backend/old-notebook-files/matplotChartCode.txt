@@ -1,0 +1,223 @@
+# old matplotlib chart code
+'''
+
+
+    fig1 = sns.countplot(x='algorithm', data=finalConcat)
+
+    # group by algorithm then count
+    fig1.set(title='Enhancer-Gene Links Counts Comparison', xlabel='', ylabel='Count')
+    fig1.figure.savefig(imagesFileNameBar + "TotalCountComparison.png", format="png", bbox_inches="tight")
+    fig1.figure.clf()
+
+    # count number of unique enhancer IDs per algorithm
+    numUniqueEnhPerAlg = finalConcat.groupby(['algorithm']).nunique()['enh_id']
+    fig27 = numUniqueEnhPerAlg.plot(kind='bar', color="indigo", title='Enhancers',
+                                    ylabel='# Unique Enhancers',
+                                    xlabel='', figsize=(10, 10))
+    enhancersFig = fig27.get_figure()
+    # enhancersFig.suptitle('Enhancer comparision', fontsize=20)
+    enhancersFig.figure.suptitle('Enhancer comparision', fontsize=20)
+    enhancersFig.savefig(imagesFileNameBar + "uniqueEnhancersByMethod.png", format="png", bbox_inches="tight")
+    fig27.figure.clf()
+
+    # count number of unique gene IDs per algorithm
+    numUniqueGenePerAlg = finalConcat.groupby(['algorithm']).nunique()['gene_id']
+    fig37 = numUniqueGenePerAlg.plot(kind='bar', color="red", title='Genes',
+                                     ylabel='# Unique Genes',
+                                     xlabel='', figsize=(10, 10))
+    fig37.figure.suptitle('Gene comparision', fontsize=20)
+
+    fig37.figure.savefig(imagesFileNameBar + "uniqueGenesByMethod.png", format="png", bbox_inches="tight")
+    fig37.figure.clf()
+    indigo = mpatches.Patch(color='indigo', label='Enhancer')
+
+    red = mpatches.Patch(color='red', label='Gene')
+
+    plt.legend(handles=[indigo, red])
+    plt.clf()
+    indigo = mpatches.Patch(color='indigo', label='Enhancer')
+
+    red = mpatches.Patch(color='red', label='Gene')
+    plt1.legend(handles=[indigo, red])
+    plt1.ylabel('')
+    plt1.xlabel('')
+    plt1.savefig(imagesFileNameBar + 'enhancerGene.png', format="png", bbox_inches="tight")
+    plt1.clf()
+    imagesFileNameVenn = imagesFileName + 'VennDiagram/'
+    if not os.path.exists(imagesFileNameVenn):
+        # If it doesn't exist, create it
+        os.makedirs(imagesFileNameVenn)
+
+    # DEFINES DATA FOR VENN 1
+    set1 = []
+    set2 = []
+    set3 = []
+    # stores unique gene IDs per algorithm
+    if 'distance' in algorithms:
+        set2 = set(distance['gene_id'])
+    if 'chiaPet' in algorithms:
+        set1 = set(chiaPet['gene_id'])
+    if 'eqtl' in algorithms:
+        set3 = set(eqTL['gene_id'])
+    fig = plt.figure(figsize=(10, 10))
+
+    createVenn(set1, set2, set3)
+    fig.suptitle('Overlaps between unique genes linked per method', fontsize=20)
+    plt.savefig(imagesFileNameVenn + 'AllGeneComparsion.png', format="png", bbox_inches="tight")
+    plt.clf()
+
+    # DEFINES DATA FOR VENN 2
+    set1 = []
+    set2 = []
+    set3 = []
+    # stores unique enhancer IDs per algorithm
+    if 'distance' in algorithms:
+        set2 = set(distance['enh_id'])
+    if 'chiaPet' in algorithms:
+        set1 = set(chiaPet['enh_id'])
+    if 'eqtl' in algorithms:
+        set3 = set(eqTL['enh_id'])
+
+    fig = plt.figure(figsize=(10, 10))
+    fig.suptitle('Overlaps between unique enhancers linked per method', fontsize=20)
+
+    # Here create the venn diagram
+    createVenn(set1, set2, set3)
+    plt.savefig(imagesFileNameVenn + 'AllEnhancerComparsion.png', format="png", bbox_inches="tight")
+    plt.clf()
+    plt.rcParams.update({'font.size': 15})
+
+    # DEFINES DATA FOR VENN 3
+    set1 = []
+    set2 = []
+    set3 = []
+    # stores unique enhancer-gene pairs per algorithm
+    if 'distance' in algorithms:
+        set2 = set(distance['key'])
+    if 'chiaPet' in algorithms:
+        set1 = set(chiaPet['key'])
+    if 'eqtl' in algorithms:
+        set3 = set(eqTL['key'])
+
+    fig = plt.figure(figsize=(10, 10))
+    fig.suptitle('Overlaps between unique enhancers-Gene linkage per method', fontsize=20)
+    ax = plt.gca()
+    v = createVenn(set1, set2, set3)
+    h, l = [], []
+
+    if 'chiaPet' in algorithms:
+        if not math.isnan(chiaPet['loop_score'].mean()):
+            l.append(0 if math.isnan(chiaPet['loop_score'].mean()) else str(
+                "{:.3f}".format(chiaPet['loop_score'].mean())) + ' cScore')
+
+    if 'distance' in algorithms:
+        if not math.isnan(distance['dist_score'].mean()):
+            l.append(0 if math.isnan(distance['dist_score'].mean()) else str(
+                "{:.3f}".format(distance['dist_score'].mean())) + ' log(distance)')
+
+    if 'eqtl' in algorithms:
+        if not math.isnan(eqTL['var_pval'].mean()):
+            l.append(0 if math.isnan(eqTL['var_pval'].mean()) else str(
+                '{:0.3e}'.format(eqTL['var_pval'].mean())) + ' pVal(eQTL)')
+        # create legend from handles and labels
+    ax.legend(handles=h, labels=l, title="Average measures of strength", loc='upper center',
+              bbox_to_anchor=(0.5, -0.05), fontsize=25)
+
+    plt.savefig(imagesFileNameVenn + 'enhancerGeneVenn.png', format="png", bbox_inches="tight")
+    plt.clf()
+
+    if 'chiaPet' in algorithms:
+        df1 = dict(Counter(chiaPet['enh_id']))
+        newdf = pd.DataFrame.from_dict(df1, orient="index").reset_index()
+        newdf = newdf.rename(columns={0: 'Number of enhancers per gene'})
+        newdf[1] = 'chiaPet'
+        del (df1)
+        del (chiaPet)
+
+    if 'distance' in algorithms:
+        df2 = dict(Counter(distance['enh_id']))
+        newdf_distance = pd.DataFrame.from_dict(df2, orient="index").reset_index()
+        newdf_distance = newdf_distance.rename(columns={0: 'Number of enhancers per gene'})
+        newdf_distance[1] = 'distance'
+        del (df2)
+        del (distance)
+
+    if 'eqtl' in algorithms:
+        df3 = dict(Counter(eqTL['enh_id']))
+        newdf_eqtl = pd.DataFrame.from_dict(df3, orient="index").reset_index()
+        newdf_eqtl = newdf_eqtl.rename(columns={0: 'Number of enhancers per gene'})
+        newdf_eqtl[1] = 'eqtl'
+        del (df3)
+        del (eqTL)
+
+    imagesFileNameHisto = imagesFileName + 'histograms/'
+    if not os.path.exists(imagesFileNameHisto):
+        # If it doesn't exist, create it
+        os.makedirs(imagesFileNameHisto)
+
+    # CHROMATIN LOOP HISTOGRAM
+    if 'chiaPet' in algorithms:
+        if newdf.shape[0] > 0:
+            fig22 = sns.histplot(data=newdf, x='Number of enhancers per gene')
+            chiapetFig = fig22.get_figure()
+            chiapetFig.suptitle('Distribution of enhancer number per gene (Chromatin Loop)', fontsize=20)
+            chiapetFig.savefig(imagesFileNameHisto + "Chromatin LoopHisto.png", format="png", bbox_inches="tight")
+            chiapetFig.figure.clf()
+        # newdf_distance[newdf_distance.repetitions > 1].count()
+
+    if 'distance' in algorithms:
+        # DISTANCE HISTOGRAM
+        if newdf_distance.shape[0] > 0:
+            fig223 = sns.histplot(data=newdf_distance, x='Number of enhancers per gene')
+            distanceFig = fig223.get_figure()
+            distanceFig.suptitle('Distribution of enhancer number per gene (Distance)', fontsize=20)
+            distanceFig.savefig(imagesFileNameHisto + "DistanceHisto.png", format="png", bbox_inches="tight")
+            fig223.figure.clf()
+
+    if 'eqtl' in algorithms:
+        # EQTL HISTOGRAM
+        if newdf_eqtl.shape[0] > 0:
+            fig228 = sns.histplot(data=newdf_eqtl, x='Number of enhancers per gene')
+            eqtlFig = fig228.get_figure()
+            eqtlFig.suptitle('Distribution of enhancer number per gene (eQTL)', fontsize=20)
+            eqtlFig.savefig(imagesFileNameHisto + "eqtlHisto.png", format="png", bbox_inches="tight")
+            fig228.figure.clf()
+
+def createVenn(chiapet, distance, eqtl):
+    ax = plt.gca()
+    num = 3
+    setAll = [chiapet, distance, eqtl]
+    li = ['Chromatin Loop', 'Distance', 'eQTL']
+    if (len(chiapet) == 0):
+        num = num - 1
+        setAll.remove(chiapet)
+        li.remove('Chromatin Loop')
+    if (len(distance) == 0):
+        num = num - 1
+        setAll.remove(distance)
+        li.remove('Distance')
+    if (len(eqtl) == 0):
+        num = num - 1
+        setAll.remove(eqtl)
+        li.remove('eQTL')
+    if (num == 3):
+        return venn3(setAll, tuple(li), ax=ax)
+    elif (num == 2):
+        return venn2(setAll, tuple(li), ax=ax)
+'''
+
+# ## Questions
+# ### What do we want
+# 1. Maximum number of enhancer-gene combination?
+# 2. More number of genes to be linked?
+# 3. More number of enhancer to be identified?
+#
+# ## Questions to think
+# 1. We are only dealing with numbers right now.
+# 2. What about quality?
+# 3. Quantifying only numbers, is it correct?
+# 4. Distance is like a sore thumb here.
+
+# 1. Removed dot from eqtl
+# 2. Data change - treatment of negative distance
+# 3. Unique enhancer, unique enhancer

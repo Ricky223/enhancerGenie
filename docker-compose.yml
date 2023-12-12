@@ -1,0 +1,22 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    image: enhancer-gene-pro-backend
+    environment:
+      - CONN_STR=mongodb+srv://jcranney11:ZTjjUF5MxOAWIpwO@cluster1.oydbbaw.mongodb.net/?retryWrites=true&w=majority
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend:/app
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    image: enhancer-gene-pro-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/react-app
+      - /react-app/node_modules

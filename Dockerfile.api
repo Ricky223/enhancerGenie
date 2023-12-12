@@ -1,0 +1,13 @@
+FROM ubuntu
+
+WORKDIR /app
+
+COPY backend .
+
+RUN apt update
+RUN apt install python3-pip -y
+RUN apt-get install bedtools
+RUN pip install -r ./requirements.txt
+
+EXPOSE 8080
+CMD [ "hupper", "-m", "waitress", "--port=8080", "Executor:app" ]

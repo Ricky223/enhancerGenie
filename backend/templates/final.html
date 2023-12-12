@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>File Download </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<style>
+      body {
+        font-family: monospace;
+        background-color: #fffff9;
+        /* background-image: url('../static/gene.jpg'); */
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .heading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: #003073;
+        color: white;
+        padding: 5px 20px;
+        width: 100%;
+      }
+            h3 {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+		form {
+			width: 400px;
+			margin: auto;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			background-color: #f2f2f2;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="file"],
+		textarea {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			margin-bottom: 20px;
+			box-sizing: border-box;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+        .progress {
+			background-color: #ddd;
+			border-radius: 10px;
+            {#margin:auto;#}
+			{#padding: 3px;#}
+			width: 300px;
+            {#margin-top: 50px;#}
+		}
+      .top-part {
+         height: 50vh;
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* background: #a5caff; */
+      }
+		.progressBar {
+			background-color: #4CAF50;
+			height: 20px;
+			border-radius: 10px;
+			width: 0%;
+			transition: width 0.5s ease-in-out;
+		}
+
+		.progressLabel {
+			margin-top: auto;
+
+			font-size: 18px;
+			font-weight: bold;
+			text-align: center;
+		}
+		.download{
+            {#margin-top: auto;#}
+			text-align:center;
+		}
+                h2{
+            text-align: center;
+            {#color: white;#}
+            font-weight: bold;
+        }
+
+	</style>
+</head>
+<script>
+    function loading(){
+        console.log("inside loading")
+        document.getElementById("aa").style.width="50%";
+        document.getElementById("form").style.display="none";
+        document.getElementById("loading").style.display="block";
+    }
+</script>
+<body>
+ <div class="heading">
+        <h3>Enhancer-Gene Prediction Comparison
+        </h3>
+         <a style="font-weight: bold; color: white" href="/backend/static">Usage</a>
+
+      </div>
+<div class="top-part">
+<div class="progress">
+	<div class="progressBar" id="aa" style="width: 100%"></div>
+</div>
+<br>
+<div class="download">
+    <h3>Your file is ready to download.</h3>
+
+	<a class="btn btn-outline-success btn-lg btn-block" role="button" href="{{ request.base_url }}{{url_for('database_download', filename=filename) }}">Download File</a>
+
+<a class="btn btn-outline-success btn-lg btn-block" role="button" href="/backend/static">Start Another Analysis</a>
+</div>
+
+
+                   {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+
+            <h5 style="text-align: center"> {{ message }} </h5>
+
+
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+ <h5>Please download within 10 minutes of receiving the email</h5>
+</div>
+
+
+</body>
+
+</html>

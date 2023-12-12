@@ -1,0 +1,50 @@
+.all {
+    font-family: monospace;
+    background-color: #fffff9;
+    background-size: auto;
+}
+
+.h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blockTitle {
+    color: #003073;
+    font-weight: bolder !important;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    column-gap: 10%;
+    margin-top: 2%;
+}
+
+.parent:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.left {
+    width: 40%;
+}
+
+.right {
+    width: 40%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.picSize {
+    width: 300px;
+    height: auto;
+}
